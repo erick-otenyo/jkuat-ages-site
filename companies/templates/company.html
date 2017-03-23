@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block page-css %}
+    <link href="{% static 'assets/css/leaflet.css' %}" rel="stylesheet">
+{% endblock page-css %}
+
+
+{% block  body %}
+    <div id="companies-map" style="height: 500px; width:100%;"></div>
+{% endblock body %}
+
+{% block page-js %}
+    <script src="{% static 'assets/js/leaflet.js' %}"></script>
+    <script>
+        var map = L.map('companies-map', {
+            center: [-1.2921, 36.8219],
+            zoom: 6
+        });
+
+        var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 20,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+    </script>
+{% endblock page-js %}

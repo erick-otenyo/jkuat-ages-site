@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block body %}
+    <header class="main-header">
+    <div class="container">
+        <h1 class="page-title">Semester Activities / Notice Board</h1>
+
+        <ol class="breadcrumb pull-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Activities</a></li>
+        </ol>
+    </div>
+</header>
+    <div class="container">
+        <section>
+            <h3 class="timeline-title"><span>2017</span></h3>
+            <div class="row timeline">
+                <div class="col-sm-6 timeline-left">
+                    {% for a in activities %}
+                        {% if a.category == 'normal' %}
+                            <div class="timeline-event timeline-event-left animated bounceInLeft animation-delay-3">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading"><strong>{{ a.name }}</strong> - {{ a.date }}</div>
+                                    <img src="{{ a.image.url }}" class="img-responsive" alt="Image">
+                                    <div class="panel-body">
+                                        <p>{{ a.detail }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                {% for a in activities %}
+                    {% if a.category == 'notice' %}
+                        <div class="col-sm-6 timeline-right">
+
+                            <div class="timeline-event timeline-event-right animated bounceInRight animation-delay-7">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading"><strong>{{ a.name }}</strong> - {{ a.date }}</div>
+                                    <img src="{{ a.image.url }}" class="img-responsive" alt="Image">
+                                    <div class="panel-body">
+                                        <p>{{ a.detail }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </section>
+    </div> <!-- container -->
+{% endblock %}

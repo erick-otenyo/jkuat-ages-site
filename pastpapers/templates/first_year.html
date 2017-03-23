@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% block body %}
+    <header class="main-header">
+        <div class="container">
+            <h1 class="page-title">First Year Past Papers</h1>
+
+            <ol class="breadcrumb pull-right">
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Timeline</a></li>
+                <li class="active">Timeline Left</li>
+            </ol>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 ">
+                <ul class="timeline-2">
+                    {% for p in papers %}
+                        <li class="animated fadeInRight animation-delay-2">
+                            <time class="timeline-time" datetime=""><span>{{ p.unit_title }}</span></time>
+                            <i class="timeline-2-point"></i>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Event with several images and table!</div>
+                                <div class="panel-body">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam, nulla recusandae
+                                        blanditiis architecto soluta culpa obcaecati quis earum atque consequuntur.</p>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <img src="assets/img/demo/office2.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <img src="assets/img/demo/office3.jpg" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <img src="assets/img/demo/office4.jpg" alt="" class="img-responsive">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, ipsum
+                                        voluptates eius placeat dolorum reprehenderit ducimus accusamus magni aspernatur
+                                        at dolore assumenda quae suscipit enim veritatis obcaecati molestias laudantium
+                                        maxime!</p>
+                                </div>
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Username</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <div class="content-box box-primary animated fadeInDown animation-delay-14">
+                    <span class="icon-ar icon-ar-lg icon-ar-round icon-ar-inverse icon-ar-white"><i
+                            class="fa fa-star"></i></span>
+                    <h4 class="content-box-title">Lorem ipsum dolor</h4>
+                    <p>Consectetur adipisicing elit vritatis dolor rem officia molestiae atque eveniet inventore earum
+                        quas voluptates cumque</p>
+                </div>
+                <br>
+                <div class="panel-group animated fadeInDown animation-delay-12" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading panel-heading-link">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                <i class="fa fa-lightbulb-o"></i> Talent and creativity
+                            </a>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati molestiae id
+                                    ipsum ipsa repudiandae. Voluptatum, molestias, quas magnam repellat quos facilis
+                                    sequi. Ullam optio eius deleniti dolore quasi doloribus ipsam incidunt
+                                    perferendis.</p>
+                                <p>Dolores, corrupti, laborum, officia sit aliquam doloremque accusantium nemo sunt
+                                    veniam est incidunt perferendis minima obcaecati ex aperiam voluptatibus blanditiis
+                                    eum suscipit magnam dolorum in adipisci nihil ipsam perspiciatis molestiae!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading panel-heading-link">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">
+                                <i class="fa fa-desktop"></i> Design and code
+                            </a>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit dignissimos
+                                    inventore cupiditate expedita saepe enim nobis nostrum? Laborum, laudantium,
+                                    maiores, cupiditate, perspiciatis at ad accusamus corporis sed ipsam et velit!</p>
+                                <p>Incidunt, harum itaque voluptatum asperiores recusandae explicabo maiores. Alias,
+                                    quos, ex impedit at error id laborum fugit architecto qui beatae molestiae dolorum
+                                    rem veritatis quia aliquam totam accusamus perferendis. Nulla!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading panel-heading-link">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
+                                <i class="fa fa-user"></i> Quality and Support
+                            </a>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, rerum unde
+                                    doloribus accusamus pariatur non expedita quibusdam velit totam obcaecati.
+                                    Consequatur, deserunt, asperiores quam nisi earum voluptates animi labore
+                                    tempore!</p>
+                                <p>Dolorum, aliquam, totam labore saepe error a eum culpa assumenda sint laudantium ipsa
+                                    iure ullam et dicta nesciunt repellendus optio voluptatibus reprehenderit odit
+                                    officia fugiat necessitatibus recusandae architecto ad neque?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
